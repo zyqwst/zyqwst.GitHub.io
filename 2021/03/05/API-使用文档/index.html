@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>API+使用文档 - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="API+参考文档
+文档更新日志
+
+
+版本
+更新时间
+更...">
+  <meta name="author" content="John Doe">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: true
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '/images/theme/welcome-image.jpg',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">API+使用文档</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">API+使用文档</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>March 05, 2021</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5224</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="API-参考文档"><a href="#API-参考文档" class="headerlink" title="API+参考文档"></a>API+参考文档</h1><p><a name="DWCCI"></a></p>
+<h3 id="文档更新日志"><a href="#文档更新日志" class="headerlink" title="文档更新日志"></a>文档更新日志</h3><table>
+<thead>
+<tr>
+<th>版本</th>
+<th><strong>更新时间</strong></th>
+<th><strong>更新内容</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>V1.0.0</td>
+<td>2020-11-9</td>
+<td>增加 <strong>调试任务</strong> 功能</td>
+</tr>
+<tr>
+<td>V1.0.1</td>
+<td>2020-11-16</td>
+<td>1.增加应用的复制功能；<br />2.增加应用删除功能；<br />3.优化连接池处理，节省服务器开销；</td>
+</tr>
+<tr>
+<td>V1.0.2</td>
+<td>2020-11-22</td>
+<td>增加SQL语句和SQL构建器查询任务的分页功能</td>
+</tr>
+<tr>
+<td>V1.0.3</td>
+<td>2020-11-25</td>
+<td>1.增加自定义接口响应格式的功能；<br />2.优化【后台管理-基础设置】界面排版；</td>
+</tr>
+<tr>
+<td>V1.0.4</td>
+<td>2020-12-3</td>
+<td>1.后台管理增加用户密码重置功能；<br />2.增加登录用户密码修改功能；</td>
+</tr>
+</tbody></table>
+<p><br />API+  <code>发音：[eɪ pi aɪ] [plʌs]</code>  是一款快速、灵活的低代码接口创建平台<br><a name="7yzjh"></a></p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><p>支持原生SQL、SQL构建器 <a target="_blank" rel="noopener" href="https://mybatis.org/mybatis-3/zh/statement-builders.html">(参照MyBatis文档SQL语句构建器)</a>、静态数据、第三方接口调用 ;</p>
+<ul>
+<li>支持接口参数校验<a target="_blank" rel="noopener" href="http://json-schema-editor.sviip.com/">(参照笔者造的轮子)</a></li>
+<li>支持接口多个任务创建、编排，上级任务执行结果可作为下级任务的输入参数，任务可以根据条件动态执行；</li>
+<li>支持接口文档生成；</li>
+<li>支持ECMAScript 5语法；</li>
+</ul>
+<p><br /><strong>下面开始一个最佳实践。</strong><br><a name="Mw6TL"></a></p>
+<h3 id="平台访问地址"><a href="#平台访问地址" class="headerlink" title="平台访问地址"></a>平台访问地址</h3><ul>
+<li>API+后台访问地址：<a target="_blank" rel="noopener" href="http://172.21.244.252:8080/">http://172.21.244.252:8080</a></li>
+<li>接口创建成功后访问地址：<a target="_blank" rel="noopener" href="http://172.21.244.254:8088/">http://172.21.244.254:8088</a><br><a name="NX8dN"></a><h4 id="接口访问说明"><a href="#接口访问说明" class="headerlink" title="接口访问说明"></a>接口访问说明</h4>接口访问URL格式：<a target="_blank" rel="noopener" href="http://172.21.244.254:8088/%E5%BA%94%E7%94%A8%E5%90%8D%E7%A7%B0/%E6%8E%A5%E5%8F%A3%E5%90%8D%E7%A7%B0%EF%BC%8C%E4%BE%8B%E5%A6%82%EF%BC%9A">http://172.21.244.254:8088/应用名称/接口名称，例如：</a><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">http:<span class="hljs-comment">//172.21.244.254:8088/my-app/list-by-id?id=123</span><br></code></pre></td></tr></table></figure>
+<a name="j5DUb"></a><h3 id="用户体系"><a href="#用户体系" class="headerlink" title="用户体系"></a>用户体系</h3>管理员创建用户，也可以授予用户管理员角色。用户是接下来创建项目的基础，只有用户能创建项目，并且能把其他用户添加到本项目组<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601361506994-e2ab4bf3-8089-4702-8555-6eb82e7a319b.png#align=left&display=inline&height=470&margin=%5Bobject%20Object%5D&name=image.png&originHeight=940&originWidth=1915&size=89441&status=done&style=none&width=957.5" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br><a name="evbOH"></a><h3 id="创建一个项目"><a href="#创建一个项目" class="headerlink" title="创建一个项目"></a>创建一个项目</h3>项目负责人创建应用，输入应用基础信息、项目组成员、数据源信息。<br /><br><br />点击“创建应用”开始创建，输入项目的基本信息，上传logo。<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601349147065-e0f6ba29-e47e-46f3-ab4f-1bd3241004e1.png#align=left&display=inline&height=833&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1666&originWidth=3358&size=486050&status=done&style=none&width=1679" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br /><br><br />为项目组添加项目成员，项目成员在后续的工作中创建接口<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601350390041-d103e0b1-42ad-4ee8-9cc2-2fe6b9a37f7f.png#align=left&display=inline&height=833&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1666&originWidth=3354&size=570432&status=done&style=none&width=1677" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br /><br><br />为项目添加数据源，为后续创建接口做前期的准备<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601350521130-3d994591-12e6-4de4-8305-c751a2a57e15.png#align=left&display=inline&height=832&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1664&originWidth=3358&size=334475&status=done&style=none&width=1679" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br /></li>
+</ul>
+<p><a name="tAG9s"></a></p>
+<h3 id="创建一个接口"><a href="#创建一个接口" class="headerlink" title="创建一个接口"></a>创建一个接口</h3><p>到了这里，开始步入正题了。首先为了更清晰的组织各个接口，先创建接口分组  <code>接口分组类似于JavaWeb程序里的controller</code> ，  创建一个分组【分组一】。<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601350778956-ec504466-dfb5-427c-952b-dbad12bd5c0d.png#align=left&display=inline&height=841&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1682&originWidth=3358&size=650150&status=done&style=none&width=1679" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br />在分组一下创建一个接口 <code>/liangshan</code> ，选择分组和数据源<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601351116371-e7537653-6d4e-4461-a1d2-2158d100cd2b.png#align=left&display=inline&height=829&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1658&originWidth=3356&size=288477&status=done&style=none&width=1678" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br /><br><br />接口创建成功后，点击接口右侧的“详情”按钮，进入到接口详情页面，如下图所示：<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601351214237-4e9948cc-abfd-4a0f-98a0-ce605405a9f3.png#align=left&display=inline&height=835&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1670&originWidth=3354&size=335778&status=done&style=none&width=1677" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br><a name="rnvFm"></a></p>
+<h3 id="接口参数设置"><a href="#接口参数设置" class="headerlink" title="接口参数设置"></a>接口参数设置</h3><p>首先设置接口的请求参数，参数可以设置是否必填，可以设置是日期、时间、email等格式。后续发起接口请求时会对接口参数进行验证。当然也可以不设置任何参数，直接点击“保存参数”按钮。<br /></p>
+<p><a name="kirPO"></a></p>
+<h3 id="接口任务列表"><a href="#接口任务列表" class="headerlink" title="接口任务列表"></a>接口任务列表</h3><p>接口的任务支持<strong>原生SQL、SQL语句构建器、静态数据、第三方接口</strong>四种方式。<br /></p>
+<p><a name="HV6mR"></a></p>
+<h4 id="原生SQL任务"><a href="#原生SQL任务" class="headerlink" title="原生SQL任务"></a>原生SQL任务</h4><p>首先创建第一个任务，如下图所示创建了一个原生SQL任务；</p>
+<ol>
+<li><strong>任务结果变量名称：</strong>指任务执行结束后如何接收任务执行的结果集，这里将结果赋值给变量list；</li>
+<li><strong>结果集类型：</strong>任务返回的结果类型（Array或Object）；</li>
+<li><strong>SQL类型：</strong>可以选择查询、更新、插入、删除；如果选择更新、插入和删除三种类型时，接口将自动增加事务管理（需要确保底层数据支持）；</li>
+<li><strong>SQL语句：</strong>SQL语句支持NamedParameter参数占位符，动态传入zbCode的值，zbCode是接口调用传入的参数；可<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/spring-framework-reference/data-access.html#jdbc-NamedParameterJdbcTemplate">参照Spring官网</a>;<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> T_ACTOR <span class="hljs-keyword">where</span> first_name <span class="hljs-operator">=</span> :firstName;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> T_ACTOR <span class="hljs-keyword">where</span> first_name <span class="hljs-keyword">in</span> (:forstNameList);<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> T_ACTOR <span class="hljs-keyword">where</span> createTime <span class="hljs-keyword">between</span> :<span class="hljs-keyword">start</span> <span class="hljs-keyword">and</span> :<span class="hljs-keyword">end</span>;<br></code></pre></td></tr></table></figure>
+然后点击“创建任务”按钮，保存该任务；<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601351721364-418f8e3e-f049-4a05-95be-f267971921ff.png#align=left&display=inline&height=829&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1658&originWidth=3358&size=324262&status=done&style=none&width=1679" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br /></li>
+</ol>
+<p><a name="wb3ux"></a></p>
+<h3 id="生成接口文档"><a href="#生成接口文档" class="headerlink" title="生成接口文档"></a>生成接口文档</h3><p>对于原生SQL的方式，支持接口文档一键生成，如下图，点击“生成接口文档”按钮，自动生成下面的接口字段描述内容，最后点击“保存参数”按钮，经过以上三个步骤，该接口已经创建完成并且自动发布。<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601352636031-813fb5bb-e913-43d2-8508-b389eec0f9d2.png#align=left&display=inline&height=935&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1870&originWidth=3358&size=1214044&status=done&style=none&width=1679" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br />接下来可以在应用页面查看打开项目文档，点击“查看文档”，浏览器打开该应用的接口文档<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601361106363-8b2e8641-8d6e-4332-9bdb-ec1afccacbf0.png#align=left&display=inline&height=470&margin=%5Bobject%20Object%5D&name=image.png&originHeight=939&originWidth=1916&size=69329&status=done&style=none&width=958" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601361163914-be24db8f-d8b1-4f86-9b9f-59e83ed6cca5.png#align=left&display=inline&height=471&margin=%5Bobject%20Object%5D&name=image.png&originHeight=942&originWidth=1917&size=95729&status=done&style=none&width=958.5" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br><a name="BRXoS"></a></p>
+<h3 id="其他任务类型"><a href="#其他任务类型" class="headerlink" title="其他任务类型"></a>其他任务类型</h3><p>前面介绍了如何创建一个原生SQL任务，如果接口内部逻辑比较复杂，可以考虑创建多个任务，并且对任务进行编排。<br><a name="8DJcv"></a></p>
+<h4 id="创建静态数据任务"><a href="#创建静态数据任务" class="headerlink" title="创建静态数据任务"></a>创建静态数据任务</h4><p>有一些常量型的数据，后期可能会变化，那么可以考虑静态数据任务<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601358392219-dca9120e-2a36-4087-921a-699b6bff5caa.png#align=left&display=inline&height=831&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1662&originWidth=3358&size=313593&status=done&style=none&width=1679" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br><a name="bRv4W"></a></p>
+<h4 id="创建SQL构建器任务"><a href="#创建SQL构建器任务" class="headerlink" title="创建SQL构建器任务"></a>创建SQL构建器任务</h4><p>当需要根据参数值动态创建SQL，那么SQL语句构建器可以帮助你。</p>
+<ol>
+<li><strong>SQL片段拼接条件：</strong>只有条件满足的时候才会拼接该段SQL，这里是一段JavaScript表达式，返回值是布尔类型；</li>
+</ol>
+<p><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601358528322-73ad1813-d9ae-4e52-a75d-3b4525e9e783.png#align=left&display=inline&height=835&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1670&originWidth=3356&size=351505&status=done&style=none&width=1678" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br><a name="o5Vh6"></a></p>
+<h4 id="创建第三方接口任务"><a href="#创建第三方接口任务" class="headerlink" title="创建第三方接口任务"></a>创建第三方接口任务</h4><p>有时候接口里不仅对数据库操作，还会调用第三方的接口，那么可以创建一个第三方接口任务。<br /></p>
+<blockquote>
+<p>第三方接口调用支持 <code>$&#123;p&#125;</code> 占位符，在URL、params、headers、body里都支持输入占位符，占位符参数值从上下文动态获取。可以作为占位符参数的有：接口入参、上级任务的结果、上级任务创建的变量。</p>
+</blockquote>
+<p><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601358875214-bfc56028-527b-4408-a949-6730eda23b65.png#align=left&display=inline&height=832&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1664&originWidth=3358&size=327412&status=done&style=none&width=1679" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br /></p>
+<p><a name="inrrX"></a></p>
+<h3 id="创建高级任务"><a href="#创建高级任务" class="headerlink" title="创建高级任务"></a>创建高级任务</h3><p>如果需要对任务执行后的结果集进行进一步的加工，该怎么办？don’t worry，API+有能力协助你进行这项复杂的工作。<br />例如，我需要对SQL任务查询到的数组统计其条数size，并且一起返回给接口。<br /></p>
+<ol>
+<li><strong>高级任务切换按钮</strong>：点击后切换为高级任务编辑模式；高级任务增加了 <strong>前置条件、后置处理、任务返回值</strong> 三个编辑框；</li>
+<li><strong>前置条件：</strong>支持JavaScript语句，返回值是布尔类型，不填为true，只有为true时该任务才会被执行；</li>
+<li><strong>后置处理：</strong>支持JavaScript语句，可定义变量，变量可以一起返回给接口；</li>
+<li><strong>任务返回值：</strong>选择该任务需要返回的结果，包括任务变量名和后置处理增加的变量。在基础模式下无需此操作，默认返回任务变量名；</li>
+</ol>
+<p><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1601359744634-b2c827d6-1572-44a7-b8eb-6172d9bc19e9.png#align=left&display=inline&height=540&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1079&originWidth=1919&size=140886&status=done&style=none&width=959.5" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br /></p>
+<p><a name="xZjta"></a></p>
+<h3 id="调试任务"><a href="#调试任务" class="headerlink" title="调试任务"></a>调试任务</h3><p>任务繁忙，终于在周日抽空发布了任务调试的功能！在任务编辑窗口点击 <strong>去调试</strong> 按钮打开任务调试界面<br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1604896197248-0c686701-6f32-4e82-8ba8-7ba945a02226.png#align=left&display=inline&height=832&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1664&originWidth=3358&size=359864&status=done&style=none&width=1679" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br />打开任务调试抽屉</p>
+<ul>
+<li>输入任务所需要的参数（json格式），点击 <strong>调试</strong> 按钮开始调试任务，如果运行失败，则提示任务调试失败，具体原因可查看下方的任务执行日志</li>
+<li>对于下图第4点，因为会随时调整任务定义信息，调整后需要刷新下任务定义信息到调试区域，继续调试任务。</li>
+</ul>
+<p><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1604896361985-9c9f8d9f-06d6-4588-a0e7-d2a04c56b8e2.png#align=left&display=inline&height=1049&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2098&originWidth=3358&size=539076&status=done&style=none&width=1679" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br><a name="BB7bl"></a></p>
+<h3 id="分页功能"><a href="#分页功能" class="headerlink" title="分页功能"></a>分页功能</h3><p>SQL分页是必不可少的功能，分页功能使用方法</p>
+<ol>
+<li>构建方式选择 <strong>原生SQL</strong> / <strong>SQL构建器</strong> ，SQL类型选择 <strong>SELECT</strong> 后自动激活分页插件；</li>
+<li>选择 <strong>添加分页</strong> ，输入 <strong>每页条数</strong> 和 <strong>当前页码</strong> </li>
+<li><strong>当前页码</strong> ：因为当前查询的页码需要动态传入，所以可以设置一个变量，变量值从参数中获取；例如：pageNum。 <strong>每页条数</strong> ：一般而言每页条数是10、20等常量，当然也支持变量的方式，例如：pageSize。</li>
+</ol>
+<p><br /><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1606036934629-ef97ae65-8065-45d8-b41f-3768cb74f8dd.png#align=left&display=inline&height=828&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1656&originWidth=3356&size=344203&status=done&style=none&width=1678" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br />下面是一次分页查询返回的结果</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&#123;<br>  <span class="hljs-string">&quot;total&quot;</span>: <span class="hljs-number">31</span>,	<span class="hljs-comment">// 总条数</span><br>  <span class="hljs-string">&quot;list&quot;</span>: [	<span class="hljs-comment">// 本页数据</span><br>    &#123;<br>      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">68</span>,<br>      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;b&quot;</span>,<br>      <span class="hljs-string">&quot;xxxx&quot;</span>: <span class="hljs-string">&quot;b&quot;</span><br>    &#125;<br>  ],<br>  <span class="hljs-string">&quot;pageNum&quot;</span>: <span class="hljs-number">4</span>, <span class="hljs-comment">//当前页码</span><br>  <span class="hljs-string">&quot;pageSize&quot;</span>: <span class="hljs-number">10</span>, <span class="hljs-comment">//每页条数</span><br>  <span class="hljs-string">&quot;size&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// 当前页查询到的记录数</span><br>  <span class="hljs-string">&quot;startRow&quot;</span>: <span class="hljs-number">30</span>, <span class="hljs-comment">// 当前查询的起始行号(不包含)</span><br>  <span class="hljs-string">&quot;endRow&quot;</span>: <span class="hljs-number">40</span>, <span class="hljs-comment">// 当前查询的终止行号</span><br>  <span class="hljs-string">&quot;pages&quot;</span>: <span class="hljs-number">4</span>, <span class="hljs-comment">// 总页数</span><br>  <span class="hljs-string">&quot;hasPreviousPage&quot;</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">//是否有上一页</span><br>  <span class="hljs-string">&quot;hasNextPage&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">// 是否有下一页</span><br>  <span class="hljs-string">&quot;firstPage&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">//是否第一页</span><br>  <span class="hljs-string">&quot;lastPage&quot;</span>: <span class="hljs-literal">true</span> <span class="hljs-comment">//是否最后一页</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><a name="idXMx"></a></p>
+<h3 id="自定义接口响应数据格式"><a href="#自定义接口响应数据格式" class="headerlink" title="自定义接口响应数据格式"></a>自定义接口响应数据格式</h3><p>对于一般的接口访问，API+ 提供了默认的接口封装格式，如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&#123;<br>  code: <span class="hljs-string">&quot;$&#123;code&#125;&quot;</span>, <span class="hljs-comment">// 请求状态，200表示正常</span><br>  msg: <span class="hljs-string">&quot;$&#123;msg&#125;&quot;</span>, <span class="hljs-comment">// 如果code&lt;&gt;200，则显示错误信息</span><br>  result: <span class="hljs-string">&quot;$&#123;result&#125;&quot;</span> <span class="hljs-comment">// 具体数据</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>对于需要自定义接口响应格式的用户，可以在【应用设置】-【基础设置】-【接口格式】里添加自定义格式。设置接口执行成功和接口执行失败的接口响应格式。可以设置占位符，占位符在运行时系统动态替换成业务数据，内置的占位符有如下三个：</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>占位符</strong></th>
+<th align="center"><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>${code}</strong></td>
+<td align="center">表示接口返回的状态，一般返回200(接口调用成功),500(接口执行失败),401(接口没有正确的授权)</td>
+</tr>
+<tr>
+<td align="center"><strong>${result}</strong></td>
+<td align="center">表示接口返回的实际数据，当code不等于200时，值为null</td>
+</tr>
+<tr>
+<td align="center"><strong>${msg}</strong></td>
+<td align="center">表示接口调用提示信息，当code不等于200时，值为接口调用失败的原因</td>
+</tr>
+</tbody></table>
+<p><img    class="lazyload" data-original="https://cdn.nlark.com/yuque/0/2020/png/627161/1606313676746-132763d5-cfcd-4e89-b365-ddb43af958fb.png#align=left&display=inline&height=918&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1836&originWidth=3336&size=516423&status=done&style=none&width=1668" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image.png</span><br><a name="E37xh"></a></p>
+<h3 id="一些非填不可的坑、一些小惊喜"><a href="#一些非填不可的坑、一些小惊喜" class="headerlink" title="一些非填不可的坑、一些小惊喜"></a>一些非填不可的坑、一些小惊喜</h3><ol>
+<li><p><strong>（坑）</strong>在后置处理器中，如果变量是数组，那么要通过Arrays.asList(object[] arr)进行一次转换，否则数组会变成对象;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> array = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>];<br>array = Arrays.asList(array);<br></code></pre></td></tr></table></figure></li>
+<li><p>为JavaScript语法提供了<a target="_blank" rel="noopener" href="https://www.html.cn/doc/lodash/">Lodash</a>加持。比如你可以在后置处理器中对数组进行分组；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 按照动物和植物分组</span><br><span class="hljs-keyword">var</span> arr = [&#123;<span class="hljs-string">&#x27;type&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;value&#x27;</span>:<span class="hljs-string">&#x27;犀牛&#x27;</span>&#125;,&#123;<span class="hljs-string">&#x27;type&#x27;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&#x27;value&#x27;</span>:<span class="hljs-string">&#x27;橘子&#x27;</span>&#125;,&#123;<span class="hljs-string">&#x27;type&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;value&#x27;</span>:<span class="hljs-string">&#x27;河马&#x27;</span>&#125;];<br><span class="hljs-keyword">var</span> groupList = _.groupBy(arr,<span class="hljs-string">&#x27;type&#x27;</span>);<br></code></pre></td></tr></table></figure></li>
+<li><p>在API+编写JS代码，为了规避undefined的问题，建议携带作用域this；例如：判断变量p1是否存在，如果存在必须大于0</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-built_in">this</span>.p1 &amp;&amp; <span class="hljs-built_in">this</span>.p1&gt;<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+<p><a name="nzQBr"></a></p>
+<h3 id="下一步规划-删除线的功能表示已经上线"><a href="#下一步规划-删除线的功能表示已经上线" class="headerlink" title="下一步规划 (删除线的功能表示已经上线)"></a>下一步规划 (删除线的功能表示已经上线)</h3></li>
+<li><p><del><strong>任务调试功能</strong></del></p>
+</li>
+</ol>
+<p><del>如果对API+有过深入的体验，那么一定会发现对于业务比较复杂的接口，接口创建成功后才能验证是否正确。所以下一步的规划是对任务的测试功能，创建接口的过程中可以直接测试每个任务的正确性。</del></p>
+<ol start="2">
+<li><strong>接口安全控制</strong></li>
+</ol>
+<p>接口的访问授权规划有两种方案：</p>
+<ul>
+<li><strong>IP白名单：</strong>针对应用增加IP白名单，支持固定IP或IP段授权访问；</li>
+<li><strong>AK认证：</strong>为应用创建app_key和app_secret；</li>
+</ul>
+<ol start="3">
+<li><del><strong>接口返回参数格式自定义封装</strong></del></li>
+</ol>
+<p><del>目前接口返回数据结构是固定的，如下所示：</del></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&#123;<br>  code: <span class="hljs-number">200</span>/<span class="hljs-number">500</span>/<span class="hljs-number">401.</span>.., <span class="hljs-comment">// 请求状态，200表示正常</span><br>  msg: <span class="hljs-string">&#x27;错误信息&#x27;</span>, <span class="hljs-comment">// 如果code&lt;&gt;200，则显示错误信息</span><br>  result: &#123;&#125; <span class="hljs-comment">// 具体数据</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><del>为了更加灵活的兼容其他系统，下一步将增加自定义响应体的功能。</del></p>
+<ol start="4">
+<li><del><strong>SQL查询任务的分页功能</strong></del></li>
+</ol>
+<p><del>尽管分页查询功能目前可以通过创建两个任务的方式实现，但是这一个小问题极大的影响了创建接口的效率，不符合API+的理念。所以增加SQL查询任务的分页插件支持。</del></p>
+<ol start="5">
+<li><del>后台管理添加用户密码修改的功能。</del></li>
+</ol>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>John Doe</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2021/03/05/API-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;03&#x2F;05&#x2F;API-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;03&#x2F;05&#x2F;API-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2021/02/22/hello-world/">Hello World<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#API-%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3"><span class="toc-text">API+参考文档</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-text">文档更新日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%80%A7"><span class="toc-text">特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E5%8F%B0%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80"><span class="toc-text">平台访问地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E4%BD%93%E7%B3%BB"><span class="toc-text">用户体系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE"><span class="toc-text">创建一个项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%8E%A5%E5%8F%A3"><span class="toc-text">创建一个接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="toc-text">接口参数设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8"><span class="toc-text">接口任务列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3"><span class="toc-text">生成接口文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E4%BB%BB%E5%8A%A1%E7%B1%BB%E5%9E%8B"><span class="toc-text">其他任务类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%AB%98%E7%BA%A7%E4%BB%BB%E5%8A%A1"><span class="toc-text">创建高级任务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%E4%BB%BB%E5%8A%A1"><span class="toc-text">调试任务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD"><span class="toc-text">分页功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="toc-text">自定义接口响应数据格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E9%9D%9E%E5%A1%AB%E4%B8%8D%E5%8F%AF%E7%9A%84%E5%9D%91%E3%80%81%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%83%8A%E5%96%9C"><span class="toc-text">一些非填不可的坑、一些小惊喜</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5%E8%A7%84%E5%88%92-%E5%88%A0%E9%99%A4%E7%BA%BF%E7%9A%84%E5%8A%9F%E8%83%BD%E8%A1%A8%E7%A4%BA%E5%B7%B2%E7%BB%8F%E4%B8%8A%E7%BA%BF"><span class="toc-text">下一步规划 (删除线的功能表示已经上线)</span></a></li></ol></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=790321193 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/izhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:sviip_zhang@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
